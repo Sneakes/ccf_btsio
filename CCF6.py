@@ -22,17 +22,19 @@ def fonction_A (Tableau):
     return Test
 
 def fonction_tirage() :
+    Tableau.clear()
     for i in range (5): 
         Tableau.append(random.randint(1,6))
+    return Tableau
 
 for i in range (100):
     fonction_tirage()
-
-    if (fonction_A(Tableau) == False) :
+    fonction_A(Tableau)
+    if (fonction_A (Tableau) == False) :
         perdu = perdu + 1
     else :
         gagne = gagne + 1
     
-
+print (Tableau)
 print ("Vous avez perdu ",perdu,"parties")
 print ("Vous avez gagné ",gagne,"parties")
