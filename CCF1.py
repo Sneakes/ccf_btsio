@@ -1,17 +1,8 @@
-import array
+tablo = []
 
-from msilib.schema import tables
-
-notefr = int(input("Note Fr : "))
-notemath = int(input("Note Math : "))
-notehist = int(input("Note Hist : "))
-noteang = int(input("Note Ang : "))
-noteesp = int(input("Note Esp : "))
-notephy = int(input("Note Phy : "))
-notetech = int(input("Note Tech : "))
-
-tablo = ([notefr,notemath,notehist,noteang,noteesp,notephy,notetech])
-
+for i in range (7):
+    note=int(input('saisir')) 
+    tablo.append(note)
 
 coefficient = [3,3,2,2,1,2,1]
 longtab = len(tablo) + len(coefficient)
@@ -33,4 +24,3 @@ elif (moyenne >= 10) :
     print("Mention : Passable")
 else :
     print("Vous n'avez pas été reçu")
-
